@@ -1,0 +1,32 @@
+/* -------------------------- */
+li.bullet-task-open .list-bullet:after {
+	background-color: #9575f5;
+	/* box-shadow: 0 0 0 4px var(--background-modifier-active-hover); */
+	box-shadow: 0 0 0 4px #9d71eb4a;
+}
+
+li.bullet-task-important .list-bullet:after {
+	background-color: #29ff29;
+	/* box-shadow: 0 0 0 4px var(--background-modifier-active-hover); */
+	box-shadow: 0 0 0 4px #29ff2924;
+	animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+	0% {
+		box-shadow: 0 0 0 2px #29ff2924;
+	}
+	100% {
+		box-shadow: 0 0 0 5px #29ff2924;
+	}
+}
+
+li.bullet-task-done .list-bullet:after {
+	background-color: green;
+	/* box-shadow: 0 0 0 4px #00800029; */
+	box-shadow: none;
+}
+
+li.bullet-task-done {
+	text-decoration: line-through;
+}
