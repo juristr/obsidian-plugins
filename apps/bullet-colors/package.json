@@ -5,7 +5,7 @@
 	"main": "dist/main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
-		"dev-watch": "nx watch --project=obsidian-bullet-colors -- rsync -av ./apps/bullet-colors/dist/ ~/Documents/juri-pkb/.obsidian/plugins/bullet-colors && npm run dev",
+		"devdeploy": "cp styles.css dist/ && rsync -av ./dist/ ~/Documents/juri-pkb/.obsidian/plugins/bullet-colors",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},

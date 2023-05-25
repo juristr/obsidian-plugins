@@ -43,12 +43,14 @@ export default class BulletColoringPlugin extends Plugin {
 		if (!liBullets.length) return;
 
 		liBullets.forEach((li) => {
-			if (li.innerText.startsWith("I:")) {
-				li.addClass("bullet-task-important");
+			if (li.innerText.startsWith("M:")) {
+				li.classList.add("bullet-task-moved");
+			} else if (li.innerText.startsWith("I:")) {
+				li.classList.add("bullet-task-important");
 			} else if (li.innerText.startsWith("T:")) {
-				li.addClass("bullet-task-open");
+				li.classList.add("bullet-task-open");
 			} else if (li.innerText.startsWith("D:")) {
-				li.addClass("bullet-task-done");
+				li.classList.add("bullet-task-done");
 			}
 		});
 	};

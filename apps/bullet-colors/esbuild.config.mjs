@@ -57,6 +57,6 @@ esbuild
 	})
 	.then(() => {
 		// copy the required files for publication
-		execSync("cp versions.json manifest.json dist/");
+		execSync("cp styles.css versions.json manifest.json dist/");
 	})
 	.catch(() => process.exit(1));

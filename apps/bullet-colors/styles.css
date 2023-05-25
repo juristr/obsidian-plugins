@@ -1,4 +1,22 @@
 /* -------------------------- */
+li.bullet-task-moved {
+	list-style: none;
+}
+
+li.bullet-task-moved .list-bullet:after {
+	/* content: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 30 30' fill='none' stroke='blue' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 18l6-6-6-6'/></svg>"); */
+	content: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%226%206%2012%2012%22%20fill%3D%22none%22%20stroke%3D%22blue%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%0A%20%20%3Cpath%20d%3D%22M9%2018l6-6-6-6%22%2F%3E%0A%3C%2Fsvg%3E");
+	width: 1em;
+	height: 1em;
+	pointer-events: none;
+	position: absolute;
+	background-color: inherit;
+}
+
+/* li.bullet-task-moved .list-bullet:after {
+	content: none;
+} */
+
 li.bullet-task-open .list-bullet:after {
 	background-color: #9575f5;
 	/* box-shadow: 0 0 0 4px var(--background-modifier-active-hover); */
